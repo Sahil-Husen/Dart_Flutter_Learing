@@ -61,9 +61,62 @@ void main(){
   
   print(fruits.map((e)=>e.toUpperCase()).toList());
   
-  
-  
-  
-  
-
 }
+
+
+
+/*
+ * here is the demonstration of the List.
+ * How can we use the list of Class.
+ * List of Class Object is showed there.
+
+
+void main()
+{
+
+  List<Student> students = [
+      Student('Sahil',20),
+    Student('Wasim',30),
+    Student('Kaleem',10)
+    
+  ];
+  
+  List<Student> newStudent = [];
+  for(int i=0;i<students.length;i++){
+
+    if(students[i].marks>10){
+      
+      newStudent.add(students[i]);
+    }
+  }
+  
+  print(newStudent);
+  
+  
+  
+}
+
+class  Student{
+
+ final String name;
+  double marks;
+  
+   Student(this.name, this.marks);
+  
+  
+  @override
+  String toString(){
+
+    return 'Student : $name';
+  }
+}
+
+
+
+
+
+*/
+
+
+
+
