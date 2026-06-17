@@ -1,0 +1,69 @@
+void main(){
+
+  
+  // Demostration of List in Dart
+  // List is like an array in other programming languages 
+  
+  print("----- All about the List ------\n");
+  
+  
+   print("-------Creation and Initialization of the Lists-------\n");
+  List fruits  = ["apple","banana"];
+  var list = [1,2,3,4,5];
+  List <String> students = ['sahil','afridi','kaleem'];
+  
+  // Fixed length List
+  var myList =  List<int>.filled(3, 0);
+  
+  // Access of the list
+  print("Direct access means printing whole elements together : $fruits");
+  print("index wise access: ${fruits[0]} ");
+  print('Fixed List: $myList\n');
+  
+  print("\n Properties of the List\n");
+  
+  print('Is empty: ${fruits.isEmpty}');
+  print('Length: ${fruits.length}');
+  print('First item: ${fruits.first}');
+  print('Last item: ${fruits.last}');
+  print('Where is the last of Students : ${students.reversed.toList() }');
+  
+   
+  // 3. ADDING & MODIFYING
+  
+  fruits.add("watermelon");
+  fruits.addAll(["cherry", "mangoe"]);
+   fruits.insert(1, 'Blueberry');     
+  fruits[0] = 'Red Apple';           
+  print('After modifications: $fruits\n');
+  
+  // Removing
+   print("\n Removal of the List\n");
+  fruits.remove('banana');
+  fruits.removeAt(2);
+  fruits.removeLast();
+  print('After removing the element from the list is : ${fruits}');
+  
+  
+  // ITERATION, FILTERING & TRANSFORMATION
+   print("\n List Iteration, filteration and transfromation \n");
+  
+ print('Looping items:');
+  for (var fruit in fruits) {
+    print(' - $fruit');
+  }
+  
+  print("Filtering Items:");
+  
+  print(fruits.where((fruit)=>fruit.length  > 7).toList());
+  
+  print("Transformation to Uppercase or Lowercase");
+  
+  print(fruits.map((e)=>e.toUpperCase()).toList());
+  
+  
+  
+  
+  
+
+}
