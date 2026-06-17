@@ -1,0 +1,45 @@
+void main() {
+  /* 
+     * All about the sets in Dart.
+     * It is and unordered, unique collection of elements.
+     * Unlike Lists It can't hold duplicate values.
+     * It can't be accessed using index position.
+     * All the functions are the same like the List. .add(), .addAll(), .remove(),.length()          etc. 
+     * 
+   
+   
+   */
+
+  // 1.
+  Set<String> students = {'sahil', 'kaleem', 'wasim', 'sahil'};
+  // here the sahil are appering 2 times. Dart doen't throw any error but it completely ignores it.
+
+  //   print(students);
+
+  // 2.
+
+  var someValues = <int>{90, 23, 12, 43};
+  for (final value in someValues) {
+    print(value);
+  }
+
+  // 3.
+  for (int i = 0; i < someValues.length; i++) {
+    print("\n${someValues.elementAt(i)}");
+  }
+
+  /* 
+   * Advance Operation on Sets
+   * Union - Combines both sets.
+   * Intersection - Gives the common values.
+   * Difference - the elements that are in A but not in B.
+   * 
+   * */
+
+  var setA = {1, 2, 3, 4, 5};
+  var setB = {1, 2, 4, 6, 5, 7};
+
+  print("the union of two set a and b is : ${setA.union(setB)}");
+  print("The intersection  of two set a and b is : ${setA.intersection(setB)}");
+  print("the Difference of two set a and b is : ${setA.difference(setB)}");
+}
